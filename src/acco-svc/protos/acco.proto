@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package acco;
+
+service AccoService {
+  rpc FindAllByOwnerUid (FindAllByOwnerUidRequest) returns (FindAllByOwnerUidResponse) {}
+}
+
+message FindAllByOwnerUidRequest {
+  string ownerUid = 1;
+}
+
+message FindAllByOwnerUidResponse {
+  repeated string accoIds = 1;
+}
